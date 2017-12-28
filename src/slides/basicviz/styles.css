@@ -1,0 +1,49 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+}
+
+.container > [data-example] {
+  margin: 2em 3em 0;
+  text-align: center;
+}
+
+.eqExample {
+  width: 250px;
+  height: 200px;
+  position: relative;
+  border-bottom: 3px solid white;
+}
+
+.eqExample span {
+  display: inline-block;
+  background: green linear-gradient(to top, red, transparent);
+  background-size: 100% 200px;
+  width: 10px;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.2s ease;
+}
+
+.specExample {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: darkgreen radial-gradient(rgba(0,0,0,0.4), transparent);
+  border: 5px solid rgb(86, 106, 32);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.chatAvatar {
+  --rad: 10px;
+  border-radius: 50%;
+  max-width: 200px;
+  max-height: 200px;
+  box-shadow: 0 0 0 var(--rad) #666;
+  transition: box-shadow 0.2s ease;
+}

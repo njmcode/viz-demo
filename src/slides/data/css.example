@@ -1,0 +1,8 @@
+width: 10px;
+top: 50%;
+color: rgb(255,100,100);
+transform: scale(2)
+            rotate(30deg);
+font-size: 3em;
+opacity: 0.4;
+border-radius: 5px;

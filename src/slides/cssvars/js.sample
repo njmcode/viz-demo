@@ -1,0 +1,3 @@
+// JS
+const myEl = document.querySelector('#my-element');
+myEl.style.setProperty('--size', `${someValue}px`);

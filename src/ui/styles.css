@@ -1,0 +1,98 @@
+@value smog, neonpink, neonblue, blackice, alert from 'sharedStyles/colors.css';
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'VT323';
+}
+
+.controls > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.controls i {
+  font-size: 1.5em;
+  font-family: monospace;
+  display: inline-block;
+  margin: 0 0.3em 0 0.6em;
+  vertical-align: middle;
+}
+
+.controls input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background-color: smog;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.controls input[type="radio"]:checked {
+  background-color: neonpink;
+}
+
+.slideCounter {
+  font-size: 1.5em;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+.timer span {
+  display: inline-block;
+  font-size: 3em;
+  width: 120px;
+  text-align: center;
+}
+.timer button {
+  margin-right: 0.5em;
+}
+.outOfTime {
+  color: alert;
+  animation: flash 1s infinite alternate ease;
+}
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slideProgress,
+.timeProgress {
+  width: 200px;
+  height: 15px;
+  display: block;
+  position: relative;
+}
+.slideProgress span,
+.timeProgress span {
+  position: absolute;
+  display: block;
+  will-change: width;
+  transition: width 0.2s ease;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.slideProgress {
+  background: smog;
+}
+.slideProgress span {
+  background: neonpink;
+}
+.timeProgress {
+  background: blackice;
+}
+.timeProgress span {
+  background: neonblue;
+}

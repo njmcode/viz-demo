@@ -1,0 +1,10 @@
+@value neonpink, neonblue from 'sharedStyles/colors.css';
+
+.endTitle {
+  --scale: 1;
+  font-size: 18em;
+  transform: scale(var(--scale));
+  text-shadow: 10px 10px neonpink,
+    -10px -10px neonblue;
+  margin-bottom: 0;
+}

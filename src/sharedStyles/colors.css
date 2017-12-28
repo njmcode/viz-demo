@@ -1,0 +1,10 @@
+
+@value neonpink: #ff00cc;
+@value neonblue: #00ccff;
+@value smog: #422647;
+@value dusk: #200220;
+@value blackice: #0d0727;
+@value alert: #ff0022;
+@value neuro: #33ff99;
+
+@value synthwaveGrad: #422647 fixed linear-gradient(120deg, #ff00cc, #0d0727, black, #200220, #00ccff);

@@ -1,0 +1,105 @@
+@value neonpink, neonblue, smog, dusk, synthwaveGrad from './colors.css';
+
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline-color: neonblue;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: monospace;
+  font-size: 1em;
+
+}
+
+a {
+  color: neonpink;
+  text-decoration: none;
+  border-bottom: 1px dashed neonpink;
+}
+
+h2 {
+  font-family: 'Yellowtail', sans-serif;
+  font-size: 4em;
+  text-shadow: 4px 4px neonpink;
+  transform: rotate(-5deg);
+  margin-top: -0.4em;
+}
+
+h3 {
+  font-family: 'VT323', sans-serif;
+  font-size: 3em;
+  color: neonblue;
+}
+
+footer {
+  position: fixed;
+  z-index: 9999;
+  background: black;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  border-top: 1px solid dusk;
+  border-right: 1px solid dusk;
+  padding: 1em;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em;
+  text-align: center;
+  background-color: smog;
+  color: neonpink;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-family: 'VT323';
+  font-size: 1.5em;
+}
+button:disabled {
+  opacity: 0.3;
+}
+button:not([disabled]):hover {
+  background-color: neonpink;
+  color: white;
+}
+
+:global(#app) {
+  text-align: center;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: synthwaveGrad;
+}
+
+section {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(.example-code) {
+  font-size: 2.4em;
+  line-height: 1.5;
+  overflow-y: scroll;
+  max-width: 80vw;
+  max-height: 60vh;
+}

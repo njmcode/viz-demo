@@ -1,0 +1,23 @@
+// Create audio context with feature-detect
+const audio = new window.AudioContext()
+if (!audio) throw 'Web Audio API not supported!'
+
+// Create analyser node
+const analyserNode = audio.createAnalyser()
+const bufferLength = analyserNode.frequencyBinCount
+const buffer = new Uint8Array(bufferLength)
+
+// Get mic input
+navigator.mediaDevices.getUserMedia({
+  audio: true,
+}).then(device => {
+  const sourceNode = audio.createMediaStreamSource(device)
+  sourceNode.connect(analyserNode)
+})
+
+// ...get data
+analyserNode.getByteFrequencyData(buffer)
+// or
+analyserNode.getByteTimeDomainData(buffer)
+
+// buffer = [0..255, 0..255, 0..255, ...]
