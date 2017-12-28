@@ -2,6 +2,8 @@
 
 Slideshow & example code for my [BelfastJS December 2017](https://www.meetup.com/Belfast-JS/events/245183528) lightning talk.
 
+Live version is at https://njmcode.github.io/viz-demo/.
+
 Built and tested on Chrome, YMMV on other platforms (yes, I know).
 
 ## Installation
@@ -38,7 +40,7 @@ This was intended to be a quick two-page demo but really got out of hand. Protip
 
 ## TODO
 
-- [ ] Host project on GitHub Pages
+- [X] Host project on GitHub Pages
 - [ ] Improve sizing of items in view
 - [ ] Better documentation
 - [ ] Add autoprefixer & babel-env config for better cross-browser support
