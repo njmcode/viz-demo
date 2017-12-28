@@ -27,7 +27,7 @@ Built with [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) t
 - ES6 JavaScript module transpilation (via `babel-loader`)
 - `static` properties on classes (via `transform-class-properties`)
 - Object spread operator (via `transform-object-rest-spread`)
-- CSS Modules (via `css-loader`)
+- [CSS Modules](https://github.com/css-modules/css-modules) (via `css-loader`)
 - `import` handling of example/snippet files and assets (via `file-loader` and `raw-loader`)
 
 Syntax highlighting courtesy of [PrismJS](http://prismjs.com/).
@@ -39,6 +39,7 @@ This was intended to be a quick two-page demo but really got out of hand. Protip
 ## TODO
 
 - [ ] Host project on GitHub Pages
+- [ ] Improve sizing of items in view
 - [ ] Better documentation
 - [ ] Add autoprefixer & babel-env config for better cross-browser support
 - [ ] Handle errors

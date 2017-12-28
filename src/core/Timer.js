@@ -6,7 +6,7 @@ class Timer {
   static SECOND = 1000
   static MINUTE = 1000 * 60
 
-  constructor (duration, isPersistent = true) {
+  constructor (duration = 0, isPersistent = true) {
     this.isRunning = false
     this.isPersistent = isPersistent
     this._targetTimestamp = 0
@@ -22,12 +22,13 @@ class Timer {
     this.duration = duration
     this.timeRemaining = duration
     if (this.isPersistent) this._persist()
+
     return this.duration
   }
 
   hydrate (defaultDuration) {
-    const storedDuration = _hasStorage && window.localStorage.getItem(Timer.storageKey)
-    const newDuration = (storedDuration !== false) ? parseInt(storedDuration) : defaultDuration
+    const storedDuration = _hasStorage ? window.localStorage.getItem(Timer.storageKey) : null
+    const newDuration = (storedDuration !== null) ? parseInt(storedDuration) : defaultDuration
     this.set(newDuration)
     return newDuration
   }
@@ -61,7 +62,7 @@ class Timer {
   }
 
   _persist () {
-    _hasStorage && window.localStorage.setItem(Timer.storageKey, this.timeRemaining)
+    if (_hasStorage) window.localStorage.setItem(Timer.storageKey, this.timeRemaining)
   }
 }
 
