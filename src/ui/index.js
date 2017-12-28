@@ -98,8 +98,11 @@ class UI {
   }
 
   updateTimer () {
-    const t = this.timer.update()
-    if (t === 0) this.countEl.classList.add(outOfTime)
+    let t = this.timer.update()
+    if (t <= 0) {
+      this.countEl.classList.add(outOfTime)
+      t = 0
+    }
 
     const _m = lz(Math.floor(t / Timer.MINUTE))
     const _s = lz(Math.floor((t % Timer.MINUTE) / Timer.SECOND))

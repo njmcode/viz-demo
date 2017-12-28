@@ -1,5 +1,13 @@
 @value neonpink, neonblue from 'sharedStyles/colors.css';
 
+.creditsPage h3 {
+  margin-top: 0;
+}
+
+.creditsPage p {
+  font-size: 2em;
+}
+
 .endTitle {
   --scale: 1;
   font-size: 18em;
