@@ -53,6 +53,7 @@ class Analyser {
   }
 
   setMode (mode) {
+    this.actx.resume()
     if (mode === Analyser.MODE_MIC) this.connectMic()
     if (mode === Analyser.MODE_MUSIC) this.connectMusic()
   }
@@ -73,6 +74,8 @@ class Analyser {
       this.inputNode = this.actx.createMediaStreamSource(this.micInput)
       this.inputNode.connect(this.anode)
       this.anode.minDecibels = this.options.micMinDec
+
+      this.actx.resume()
 
       // We don't want the mic going to the speakers
       try {
@@ -109,6 +112,8 @@ class Analyser {
     this.inputNode.connect(this.anode)
     this.anode.minDecibels = this.options.musicMinDec
     this.anode.connect(this.actx.destination)
+
+    this.actx.resume()
   }
 }
 
